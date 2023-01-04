@@ -388,7 +388,7 @@ footer {
   height: fit-content;
   color: aliceblue;
   opacity: 1;
-  padding: 1%;
+  padding: 5%;
 }
 
 .login-form {
@@ -429,10 +429,15 @@ footer {
 .password-forgot {
   display: flex;
   width: 150px;
+  justify-content: center;
 }
 
 .modal-win-footer {
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   font-size: 0.8em;
   gap: 5%;
 }
@@ -456,6 +461,7 @@ footer {
   right: 5%;
   width: fit-content;
   transform: rotate(45deg);
+  top: 3%;
 }
 
 .close-modal-btn:hover {
@@ -528,6 +534,10 @@ footer {
 
   .modal-content {
     width: 400px;
+  }
+
+  .modal-win-footer {
+    flex-wrap: nowrap;
   }
 
   .username,
