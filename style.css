@@ -1,0 +1,545 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Domine", sans-serif;
+}
+
+body.active {
+  overflow: hidden;
+}
+
+/* HEADER and menu-btm  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.menu-btn {
+  width: 30px;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.menu-btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(154, 133, 112);
+  transition: all 0.5s;
+}
+.menu-btn span:nth-of-type(2) {
+  top: calc(50% - 5px);
+}
+.menu-btn span:nth-of-type(3) {
+  top: calc(50% + 5px);
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+  display: none;
+}
+.menu-btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.menu-btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
+
+/* Logo */
+
+.logo {
+  width: 200px;
+  height: fit-content;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* Menu */
+
+.menu {
+  opacity: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  transform: translateX(100%);
+  transition: all 1s;
+  position: fixed;
+  padding-top: 50px;
+}
+
+.menu.active {
+  opacity: 0.9;
+  transform: translateX(0);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+a {
+  color: rgb(154, 133, 112);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+  background-color: rgb(175, 149, 123);
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.75s;
+}
+
+.login-menu:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(175, 149, 123);
+  border: none;
+  padding: 10px;
+  border-radius: 20px;
+  transition: all 0.75s;
+}
+
+/* Hero */
+
+.hero-img,
+.banner-img {
+  width: 100%;
+}
+
+.hero-img img,
+.banner-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-img img {
+  object-fit: cover;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-title {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  width: 30vw;
+}
+
+h1 {
+  color: aliceblue;
+  font-size: 18px;
+}
+
+.sales-title {
+  font-size: 1.5em;
+  color: rgb(96, 81, 66);
+  padding: 0.7em;
+}
+
+.card-title {
+  font-weight: bold;
+  padding-bottom: 0.4em;
+}
+
+.hero-title p,
+.banner-title p,
+footer p {
+  color: aliceblue;
+  font-size: 10px;
+}
+
+button {
+  background-color: rgb(175, 149, 123);
+  color: aliceblue;
+  width: 20vw;
+  height: 5vh;
+  border-radius: 30px;
+  border: none;
+  margin-top: 5px;
+}
+
+/* Cards */
+
+.cards-sales {
+  background-color: rgb(206, 184, 161);
+  width: 100%;
+  overflow: auto;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.img-div {
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 150px;
+  height: 200px;
+  width: 100%;
+}
+
+.img-div:hover {
+  box-shadow: 0 0 15px 2px rgba(32, 32, 32, 0.7);
+  transform: translateY(-5px);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.cards-sales img {
+  width: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-title {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  width: 30vw;
+}
+
+.banner-title h1,
+.banner-title p {
+  color: rgb(188, 162, 135);
+}
+
+.banner-img img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.main-btn {
+  height: fit-content;
+}
+
+.main-btn:hover {
+  color: rgb(175, 149, 123);
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+
+.subscribtionform {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribtionform h3 {
+  text-align: center;
+  color: rgb(96, 81, 66);
+}
+
+.form1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 300px;
+  background-color: rgb(227, 206, 184);
+  border-radius: 20px;
+  margin: 30px;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+#button1 {
+  height: 30px;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+#button1:hover {
+  color: rgb(5, 57, 102);
+  background-color: white;
+  border: none;
+}
+
+#email {
+  height: 30px;
+  border: 0ch;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 10px;
+  background-color: rgb(96, 81, 66);
+  margin-top: 0;
+}
+
+.socialicons ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style-type: none;
+  padding-left: 0;
+  gap: 10px;
+}
+
+.icon {
+  width: 20px;
+  height: 20x;
+}
+
+.sales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scrollbar-width: 5px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}
+
+/* Carousel */
+
+.carousel {
+  width: 70%;
+  display: block;
+  margin: 1em auto;
+  border-radius: 5px;
+}
+
+.carousel img {
+  border-radius: 10px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  height: 100%;
+}
+
+/* Modal window */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255);
+  display: none;
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: rgb(126, 104, 82);
+  border-radius: 30px;
+  width: 200px;
+  height: fit-content;
+  color: aliceblue;
+  opacity: 1;
+  padding: 1%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.username,
+.password {
+  background-color: rgb(175, 149, 123);
+  color: aliceblue;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  width: 150px;
+  height: 35px;
+  padding-left: 10%;
+}
+
+.login-btn {
+  background-color: rgb(175, 149, 123);
+  color: beige;
+  border: none;
+  border-radius: 30px;
+  width: 100px;
+  height: 40px;
+}
+
+.login-btn:hover {
+  color: rgb(175, 149, 123);
+  background-color: beige;
+  transition: 0.5s;
+}
+
+.remember-checkbox,
+.password-forgot {
+  display: flex;
+  width: 150px;
+}
+
+.modal-win-footer {
+  display: flex;
+  font-size: 0.8em;
+  gap: 5%;
+}
+
+.modal-win-footer a {
+  color: beige;
+}
+
+.modal-win-footer a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.close-modal-btn {
+  position: absolute;
+  background-color: transparent;
+  color: rgb(57, 57, 57);
+  border: none;
+  font-weight: bold;
+  font-size: 1.5em;
+  right: 5%;
+  width: fit-content;
+  transform: rotate(45deg);
+}
+
+.close-modal-btn:hover {
+  background-color: transparent;
+  color: rgb(255, 0, 0);
+  color: aliceblue;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: rgb(96, 81, 66);
+  font-family: "Domine", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .logo img {
+    height: 80px;
+    object-fit: contain;
+  }
+
+  .hero-title {
+    top: 70px;
+    right: 190px;
+    width: 40vw;
+  }
+
+  h1 {
+    font-size: 5vh;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    width: 15vw;
+    height: 7vh;
+    border-radius: 30px;
+  }
+
+  .cards-sales {
+    flex-direction: row;
+  }
+
+  .form1 {
+    height: 500px;
+    width: 800px;
+  }
+
+  .banner-title {
+    top: 20px;
+    left: 250px;
+    width: 30vw;
+  }
+
+  #email {
+    width: 400px;
+    height: 50px;
+  }
+
+  #button1 {
+    width: 100px;
+    height: 50px;
+  }
+
+  footer {
+    justify-content: space-around;
+  }
+
+  .modal-content {
+    width: 400px;
+  }
+
+  .username,
+  .password {
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    width: 300px;
+    height: 35px;
+  }
+
+  .hero-img img {
+    height: 100vh;
+  }
+}
