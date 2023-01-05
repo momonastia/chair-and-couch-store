@@ -82,6 +82,7 @@ header {
   transition: all 1s;
   position: fixed;
   padding-top: 50px;
+  /*   height: 100%; */
 }
 
 .menu.active {
@@ -91,6 +92,7 @@ header {
   position: fixed;
   z-index: 1000;
   background-color: white;
+  /*  height: 100vh; */
 }
 
 nav ul {
