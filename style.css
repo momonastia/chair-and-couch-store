@@ -264,29 +264,40 @@ h4 {
   border-radius: 20px;
 }
 
-.subscribtionform {
-  height: 200px;
+.subs-section {
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3%;
 }
 
-.subscribtionform h3 {
+.subs-section h3 {
   text-align: center;
   color: rgb(96, 81, 66);
 }
 
-.form1 {
+.subs-form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 300px;
   background-color: rgb(227, 206, 184);
   border-radius: 20px;
   margin: 30px;
+  padding: 5%;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+.subs-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3%;
+}
+
+.subs-form input {
+  margin: 2%;
 }
 
 #button1 {
@@ -507,9 +518,13 @@ footer {
     flex-direction: row;
   }
 
-  .form1 {
-    height: 500px;
-    width: 800px;
+  .subs-form-container {
+    width: fit-content;
+    padding: 2%;
+  }
+
+  .subs-form {
+    flex-wrap: nowrap;
   }
 
   .banner-title {
