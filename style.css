@@ -96,7 +96,7 @@ header {
 nav ul {
   display: flex;
   align-items: center;
-  gap: 1em;
+  gap: 0.5em;
   flex-direction: column;
   list-style-type: none;
 }
