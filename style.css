@@ -59,7 +59,7 @@ header {
 /* Logo */
 
 .logo {
-  width: 200px;
+  width: 100px;
   height: fit-content;
 }
 
@@ -498,6 +498,10 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  .logo {
+    width: 200px;
+  }
+
   .logo img {
     height: 80px;
     object-fit: contain;
