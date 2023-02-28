@@ -8,7 +8,7 @@
 
 <div>
   <h3 align="left">Description</h3>
-    <p  align="left">  </p>
+    <p  align="left"> Furniture store website created in first months of Coding Bootcamp. </p>
    <br>
     
 </div>          
